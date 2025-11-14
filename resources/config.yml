@@ -1,0 +1,46 @@
+# ShardAPI Configuration File
+# Economy system using Shard currency
+
+# Default shard amount given to new players
+default-shard: 100
+
+# ===================================
+# Message Configuration
+# ===================================
+# Available placeholders:
+# {player} - Player name
+# {shard} - Shard amount
+# {amount} - Amount of shards
+# {sender} - Command sender name
+# {position} - Position in leaderboard
+
+# General Messages
+player-only: "§cThis command can only be used by players!"
+no-permission: "§cYou don't have permission to use this command!"
+invalid-amount: "§cAmount must be a valid positive number!"
+player-not-found: "§cPlayer {player} not found!"
+
+# /shard command messages
+shard-check: "§a§lYour Shard Balance§r\n§7You have §e{shard} §7shards"
+
+# /giveshard command messages
+give-usage: "§cUsage: /giveshard <player> <amount>"
+give-success: "§aSuccessfully gave §e{amount} §ashards to §e{player}§a!"
+give-received: "§aYou received §e{amount} §ashards from §e{sender}§a!"
+
+# /takeshard command messages
+take-usage: "§cUsage: /takeshard <player> <amount>"
+take-success: "§aSuccessfully took §e{amount} §ashards from §e{player}§a!"
+take-removed: "§c{amount} §cshards were taken from you by §e{sender}"
+insufficient-shards: "§c{player} only has §e{amount} §cshards!"
+
+# /setshard command messages
+set-usage: "§cUsage: /setshard <player> <amount>"
+set-success: "§aSuccessfully set §e{player}'s §ashard balance to §e{amount}§a!"
+set-updated: "§aYour shard balance has been updated to §e{amount}§a!"
+
+# /topshard command messages
+top-empty: "§cNo shard data available yet!"
+top-header: "§e§l╔══════════════════════════╗\n§e§l║ §6Top 10 Shard Leaders §e§l║\n§e§l╚══════════════════════════╝"
+top-format: "§e#{position} §f{player} §8» §a{shard} §7shards"
+top-footer: "§7§m─────────────────────────────"

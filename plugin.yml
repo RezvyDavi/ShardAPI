@@ -1,0 +1,40 @@
+---
+name: ShardAPI
+version: 0.0.1
+main: Rezvy\ShardAPI\ShardAPI
+api: 5.0.0
+src-namespace-prefix: Rezvy\ShardAPI
+author: Rezvy
+
+commands:
+  shard:
+    description: Check your shard balance
+    usage: /shard
+    permission: shardapi.command.shard
+  giveshard:
+    description: Give shards to a player
+    usage: /giveshard <player> <amount>
+    permission: shardapi.admin
+  takeshard:
+    description: Take shards from a player
+    usage: /takeshard <player> <amount>
+    permission: shardapi.admin
+  setshard:
+    description: Set player's shard balance
+    usage: /setshard <player> <amount>
+    permission: shardapi.admin
+  topshard:
+    description: Display top 10 players with most shards
+    usage: /topshard
+    permission: shardapi.command.topshard
+
+permissions:
+  shardapi.admin:
+    description: Allows access to all ShardAPI admin commands
+    default: op
+  shardapi.command.shard:
+    description: Allows using /shard command
+    default: true
+  shardapi.command.topshard:
+    description: Allows using /topshard command
+    default: true
